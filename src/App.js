@@ -35,9 +35,9 @@ export default class App extends Component {
     return {fill: context.color, fillOpacity: opacityLevel, stroke: "green", strokeWidth: 1, strokeOpacity: 0.2, cursor: "pointer" }
   }
 
-  tooltipText = (text) => {
-    return text
-  }
+  // tooltipText = (text) => {
+  //   return text
+  // }
 
   render(){
     return(
