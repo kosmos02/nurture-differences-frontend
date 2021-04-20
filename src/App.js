@@ -4,7 +4,6 @@ import  Map  from './components/worldmap'
 import { CountryDetails } from './components/countryDetails'
 
 export default class App extends Component {
-  
 
   render(){
     return(
