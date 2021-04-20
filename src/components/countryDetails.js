@@ -15,8 +15,8 @@ let getCountryHolidays = (countryCode) => {
 }
 
 useEffect(() => {
-    getCountryHolidays('US')
-},[])
+    getCountryHolidays(props.currentCountry)
+})
 
 let displayHolidays = (holidays) => {
     return holidays.map( holiday => <li>{holiday.name}</li> )
