@@ -34,16 +34,10 @@ export default class App extends Component {
     const opacityLevel = 0.1 + (1.5 * (context.countryValue - context.minValue) / (context.maxValue - context.minValue))
     return {fill: context.color, fillOpacity: opacityLevel, stroke: "green", strokeWidth: 1, strokeOpacity: 0.2, cursor: "pointer" }
   }
-<<<<<<< HEAD
 
   tooltipText = (text) => {
     return text
   }
-=======
-  // tooltipText = (text) => {
-  //   console.log(text)
-  // }
->>>>>>> 856f2ce62877f07849cdc22286a7db8d1fcb6f4b
 
   render(){
     return(
