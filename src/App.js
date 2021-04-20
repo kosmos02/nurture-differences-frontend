@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import "./App.css"
 import { WorldMap } from "react-svg-worldmap"
+import { CountryDetails } from './components/countryDetails'
 
 export default class App extends Component {
   
@@ -23,43 +24,38 @@ export default class App extends Component {
         this.countries = [...this.countries, newCountry]
         this.colorCounter++
       })
-      console.log(this.countries)
         this.setState({
           data: this.countries
         })
     });
-      
-      
   };
     
   stylingFunction = (context) => {
     const opacityLevel = 0.1 + (1.5 * (context.countryValue - context.minValue) / (context.maxValue - context.minValue))
     return { fill: context.country === "US" ? "blue" : context.color, fillOpacity: opacityLevel, stroke: "green", strokeWidth: 1, strokeOpacity: 0.2, cursor: "pointer" }
   }
-
-  tooltipText = (text) => {
-    console.log(text)
-  }
+  // tooltipText = (text) => {
+  //   console.log(text)
+  // }
 
   render(){
     return(
       
       < div className="App" >
         < div className="Main">
-          
-                  <WorldMap 
-                  color={"green"}
-                  backgroundColor='lightgreen' 
-                  tooltipBgColor={"purple"}
-                  tooltipTextFunction={this.tooltipText}
-                  title="ALLiday Map" 
-                  valueSuffix="points" 
-                  size="xl" 
-                  data={this.state.data} 
-                  frame={false} 
-                  styleFunction={this.stylingFunction}
-                  />
-                
+          <WorldMap 
+            color={"green"}
+            backgroundColor='lightgreen' 
+            tooltipBgColor={"purple"}
+            tooltipTextFunction={this.tooltipText}
+            title="ALLiday Map" 
+            valueSuffix="points" 
+            size="xl" 
+            data={this.state.data} 
+            frame={false} 
+            styleFunction={this.stylingFunction}
+          />
+          <CountryDetails />
         </div>
       </div>
     )};
