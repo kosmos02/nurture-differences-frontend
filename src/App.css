@@ -37,9 +37,13 @@
 }
 
 .holidayDate {
-  width: 10rem;
+  width: 20rem;
 }
 
 .holidayObserved {
-  width: 10rem;
+  width: 20rem;
+}
+
+.holidayType {
+  width: 20rem;
 }
