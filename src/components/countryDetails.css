@@ -1,9 +1,18 @@
+ul {
+    background-color: white;
+    border: 10px;
+    border-width: 5px;
+    border-color: black;
+    border-radius: 5%;
+}
+
 .country-details {
     border: 10px;
     border-color: black;
-    border-radius: 10%;
+    border-width: 5px;
+    border-style: double;
+    border-radius: 5%;
     list-style: none;
-    
 }
 
 .holiday-list {
