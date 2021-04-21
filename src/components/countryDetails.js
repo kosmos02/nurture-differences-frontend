@@ -35,7 +35,12 @@ export function CountryDetails(props) {
 				<div className="holidayName" data-tip data-for={holiday.name}>
 					{holiday.name}
 				</div>{" "}
-				<ReactTooltip id={holiday.name} place="top" effect="solid">
+				<ReactTooltip
+					id={holiday.name}
+					place="right"
+					type="dark"
+					effect="solid"
+				>
 					{holiday.description}
 				</ReactTooltip>
 				<div className="holidayDate">{holiday.date.iso}</div>
