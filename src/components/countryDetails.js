@@ -5,21 +5,22 @@ export function CountryDetails(props) {
 const [holidays, setHolidays] = useState([])
 
 let getCountryHolidays = (countryCode) => {
-    const apiKey = 'c369527b-cd29-4772-b393-a0582fe866a8';
+    const apiKey = '580d9214-e005-4391-9de5-8b111c8bbd0e';
     let year = '2020';
     fetch(`https://holidayapi.com/v1/holidays/?key=${apiKey}&country=${countryCode}&year=${year}`)
         .then(response => response.json())
         .then(results => {
+            console.log(results)
             setHolidays(results.holidays)
         })
 }
 
 useEffect(() => {
-    getCountryHolidays('US')
-},[])
+    getCountryHolidays(props.currentCountry)
+},[props.currentCountry])
 
 let displayHolidays = (holidays) => {
-    return holidays.map( holiday => <li>{holiday.name}</li> )
+    return holidays.map( holiday => <li>{holiday.name} date:{holiday.date}  {holiday.date !== holiday.observed ? `observed:${holiday.observed}` : null}</li> )
 }
 
     return(
