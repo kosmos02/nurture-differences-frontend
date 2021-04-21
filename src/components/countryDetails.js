@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import './countryDetails.css'
 
 export function CountryDetails(props) {
 
@@ -20,7 +21,7 @@ useEffect(() => {
 },[props.currentCountry])
 
 let displayHolidays = (holidays) => {
-    return holidays.map( holiday => <li>{holiday.name} date:{holiday.date}  {holiday.date !== holiday.observed ? `observed:${holiday.observed}` : null}</li> )
+    return holidays.map( holiday => <li className='holiday-list'>{holiday.name} date:{holiday.date}  {holiday.date !== holiday.observed ? `observed:${holiday.observed}` : null}</li> )
 }
 
     return(

@@ -1,0 +1,11 @@
+.country-details {
+    border: 10px;
+    border-color: black;
+    border-radius: 10%;
+    list-style: none;
+    
+}
+
+.holiday-list {
+    list-style: none;
+}
