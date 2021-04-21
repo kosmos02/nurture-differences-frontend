@@ -9,7 +9,7 @@ export default class App extends Component {
     currentCountry: ''
   }
 
-  colorCounter = 0;
+  colorCounter = 1;
   countries = []
 
   componentDidMount() {
@@ -31,7 +31,7 @@ export default class App extends Component {
   };
 
   selectCountry = (event, countryName, isoCode, value) => {
-    this.setState({currentCountry: `${isoCode}`})
+    this.setState({currentCountry: `${isoCode}`, currentCountryName: `${countryName}`})
   }
 
   render() {
@@ -45,6 +45,7 @@ export default class App extends Component {
             />
           <CountryDetails
             currentCountry={this.state.currentCountry}
+            currentCountryName={this.state.currentCountryName}
           />
         </div>
       </div>

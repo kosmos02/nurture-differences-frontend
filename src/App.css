@@ -2,6 +2,44 @@
   text-align: center;
 }
 
+.worldMap {
+  height: 80vh;
+}
+
 .country-details {
   background-color: lightgreen;
- }
+  margin: auto;
+  max-width: 100rem;
+  /* flex-direction: column; */
+}
+
+.holiday {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* max-width: 100rem; */
+}
+
+.holidayHeader {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.name {
+  font-size: x-large;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.holidayName {
+  width: 20rem;
+  margin-bottom: .75rem;
+}
+
+.holidayDate {
+  width: 10rem;
+}
+
+.holidayObserved {
+  width: 10rem;
+}

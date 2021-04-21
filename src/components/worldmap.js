@@ -16,22 +16,24 @@ export default class Map extends Component {
     render() {
         return (
 
-            < div className="App" >
-                < div className="Main">
+            // < div className="App" >
+            //     < div className="Main">
+            <div className="worldMap">
                     <WorldMap
                         color={"green"}
                         tooltipBgColor={"purple"}
                         tooltipTextFunction={this.tooltipText}
                         title="ALLiday Map"
                         valueSuffix="points"
-                        size="xl"
+                        size="xxl"
                         data={this.props.data}
                         frame={false}
                         styleFunction={this.stylingFunction}
                         onClickFunction={this.props.selectCountry}
                     />
-                </div>
             </div>
+            //     </div>
+            // </div>
         )
     };
 }
