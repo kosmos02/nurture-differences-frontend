@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import "./App.css"
 import Map from './components/worldmap'
 import { CountryDetails } from './components/countryDetails'
+import NavBar from './components/NavBar';
 
 export default class App extends Component {
   state = {
@@ -39,6 +40,8 @@ export default class App extends Component {
 
       < div className="App" >
         < div className="Main">
+          <NavBar />
+          <h1>   </h1>
           <Map
             data={this.state.data}
             selectCountry={this.selectCountry}
