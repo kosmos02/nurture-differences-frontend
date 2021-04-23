@@ -2,12 +2,14 @@ import React, { Component } from "react"
 import "./App.css"
 import Map from './components/worldmap'
 import { CountryDetails } from './components/countryDetails'
+import { Etiquette } from './components/etiquette'
 import NavBar from './components/NavBar';
 
 export default class App extends Component {
   state = {
     data: [],
-    currentCountry: ''
+    currentCountry: '',
+    isHoliday: true
   }
 
   colorCounter = 1;
@@ -20,6 +22,7 @@ export default class App extends Component {
         countries.forEach(country => {
           let newCountry = {
             "country": `${country.alpha2Code}`,
+            "alpha3code":`${country.alpha3Code}`,
             "value": this.colorCounter
           }
           this.countries = [...this.countries, newCountry]
@@ -34,7 +37,6 @@ export default class App extends Component {
   selectCountry = (event, countryName, isoCode, value) => {
     this.setState({currentCountry: `${isoCode}`, currentCountryName: `${countryName}`})
   }
-
   render() {
     return (
 
@@ -46,10 +48,12 @@ export default class App extends Component {
             data={this.state.data}
             selectCountry={this.selectCountry}
             />
-          <CountryDetails
+          <button onClick={() => this.setState({isHoliday: !this.state.isHoliday})}>Change State</button>
+          {this.state.isHoliday?<CountryDetails
             currentCountry={this.state.currentCountry}
             currentCountryName={this.state.currentCountryName}
           />
+          : <Etiquette data = {this.state} />}
         </div>
       </div>
     )
