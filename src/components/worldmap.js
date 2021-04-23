@@ -21,13 +21,11 @@ export default class Map extends Component {
             <div className="worldMap">
                     <h1>Alliday Map</h1>
                     <WorldMap
-                    className="map"
+                        className="map"
                         color={"green"}
-                        
                         backgroundColor
                         tooltipBgColor={"purple"}
                         tooltipTextFunction={this.tooltipText}
-                        // title="ALLiday Map"
                         valueSuffix="points"
                         size="xxl"
                         data={this.props.data}
