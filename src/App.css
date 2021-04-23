@@ -3,6 +3,10 @@
   justify-content: center;
 }
 
+#logo {
+  height: 5rem
+}
+
 .worldMap {
   border-radius: 46%;
   width: 100%;
@@ -16,7 +20,7 @@
 } */
 
 .country-details {
-  background-color: peachpuff;
+  background-color: rgb(202, 56, 252, .5);
   border-style: solid;
   margin: 30px;
   border-radius: 30px;
