@@ -10,7 +10,7 @@
   height: 5rem
 }
 
-.worldMap {
+/* .worldMap {
   border-radius: 46%;
   width: 100%;
   border-style: solid;
@@ -18,7 +18,7 @@
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   background: radial-gradient(circle at 50% 50%, #66d9e8, #47c4d7 10%, #0c7bdc 66%, #106bc1 100%);
   
-} */
+/* /* } */
 
 svg {
   border-radius: 46%;
