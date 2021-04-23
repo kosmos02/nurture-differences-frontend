@@ -6,8 +6,8 @@ export default class Map extends Component {
 
 
     stylingFunction = (context) => {
-        const opacityLevel = 0.5 + (1.5 * (context.countryValue - context.minValue) / (context.maxValue - context.minValue))
-        return { fill: context.color, fillOpacity: opacityLevel, stroke: "greenYellow", strokeWidth: 2, strokeOpacity: 0.1, cursor: "pointer" }
+        const opacityLevel = 0.1 + (1.5 * (context.countryValue - context.minValue) / (context.maxValue - context.minValue))
+        return { fill: context.color, fillOpacity: opacityLevel, stroke: "yellow", strokeWidth: 2, strokeOpacity: 0.1, cursor: "pointer" }
     }
     tooltipText = (text) => {
         return text
@@ -19,12 +19,10 @@ export default class Map extends Component {
             // < div className="App" >
             //     < div className="Main">
             <div className="worldMap">
-                    <h1>Alliday Map</h1>
                     <WorldMap
-                        className="map"
                         color={"green"}
-                        backgroundColor
                         tooltipBgColor={"purple"}
+                        backgroundColor
                         tooltipTextFunction={this.tooltipText}
                         valueSuffix="points"
                         size="xxl"
