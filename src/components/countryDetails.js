@@ -37,9 +37,11 @@ export function CountryDetails(props) {
 				</div>{" "}
 				<ReactTooltip
 					id={holiday.name}
+                    multiline='true'
 					place="right"
 					type="dark"
 					effect="solid"
+                    backgroundColor="purple"
 				>
 					{holiday.description}
 				</ReactTooltip>

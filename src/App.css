@@ -1,14 +1,25 @@
 .App {
   text-align: center;
+  justify-content: center;
 }
 
 .worldMap {
-  height: 80vh;
+  border-radius: 46%;
+  width: 100%;
+  border-style: solid;
+  background-color: lightskyblue
 }
 
+/* .map {
+  border-radius: 30%;
+  border-style: solid;
+} */
+
 .country-details {
-  background-color: lightgreen;
-  margin: auto;
+  background-color: peachpuff;
+  border-style: solid;
+  margin: 30px;
+  border-radius: 30px;
   max-width: 100rem;
   /* flex-direction: column; */
 }
@@ -17,7 +28,14 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: .75rem;
   /* max-width: 100rem; */
+}
+
+.holiday:hover{
+  background-color: papayawhip;
+  border-radius: 4px;
+  transition: all 0.2s ease-out;
 }
 
 .holidayHeader {
@@ -33,7 +51,7 @@
 
 .holidayName {
   width: 20rem;
-  margin-bottom: .75rem;
+  /* margin-bottom: .75rem; */
 }
 
 .holidayDate {
