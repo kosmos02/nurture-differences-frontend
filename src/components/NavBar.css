@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
+    box-shadow: rgba(110, 94, 254, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .navBar-logo {
