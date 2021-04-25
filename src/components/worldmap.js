@@ -12,8 +12,9 @@ export default class Map extends Component {
     tooltipText = (text) => {
         return text
     }
-
+    
     render() {
+        // console.log(this.props)
         return (
 
             // < div className="App" >

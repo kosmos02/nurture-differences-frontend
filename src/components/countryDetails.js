@@ -19,14 +19,13 @@ export function CountryDetails(props) {
 			// when using the API above, replace observed with holiday type
 			.then((response) => response.json())
 			.then((results) => {
-				console.log(results);
 				setHolidays(results.response.holidays);
 			});
 	};
 
 	useEffect(() => {
 		getCountryHolidays(props.currentCountry);
-	}, [props.currentCountry]);
+	},[props.currentCountry]);
 
 	let displayHolidays = (holidays) => {
 		// return holidays.map( holiday => <div className="holiday"><div className="holidayName">{holiday.name}</div> <div className="holidayDate">{holiday.date}</div><div className="holidayObserved">{holiday.date !== holiday.observed ? holiday.observed : " "}</div></div> )
@@ -53,7 +52,6 @@ export function CountryDetails(props) {
 
 	// if (props.currentCountry !== "") {
 	if (!!holidays) {
-		console.log(holidays);
 		return (
 			<div className="country-details">
 				<div className="name">{props.currentCountryName}</div>
@@ -66,7 +64,6 @@ export function CountryDetails(props) {
 			</div>
 		);
 	} else {
-		console.log("not rendering country details");
 		return null;
 	}
 }
