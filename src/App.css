@@ -72,7 +72,7 @@ svg {
 }
 
 .holidayDate {
-  width: 20rem;
+  width: 25rem;
 }
 
 .holidayObserved {
@@ -81,4 +81,25 @@ svg {
 
 .holidayType {
   width: 20rem;
+}
+
+.arrow {
+  width: 1.5rem;
+  height: 1rem;
+}
+
+.arrow-left:hover {
+  transform: translateX(.15rem);
+}
+
+.arrow-left:active {
+  transform: translateX(-.3rem);
+}
+
+.arrow-right:hover {
+  transform: translateX(-.15rem);
+}
+
+.arrow-right:active {
+  transform: translateX(.3rem);
 }
