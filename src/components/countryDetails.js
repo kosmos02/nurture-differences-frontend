@@ -10,12 +10,6 @@ export function CountryDetails(props) {
 	let months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
 
 	let getCountryHolidays = (countryCode) => {
-		//Holiday API key
-		// const apiKey = '580d9214-e005-4391-9de5-8b111c8bbd0e';
-		// fetch(`https://holidayapi.com/v1/holidays/?key=${apiKey}&country=${countryCode}&year=${year}`)
-		// when using the Holiday API, need replace holiday type with observed date
-
-		//Calendarific API key
 		const apiKey = 'a207d49e5afb124557eee979ab1b7ca2cc315135';
 		fetch(`https://calendarific.com/api/v2/holidays?&api_key=${apiKey}&country=${countryCode}&year=${year}&month=${month}`)
 			.then(response => response.json())
@@ -54,10 +48,6 @@ export function CountryDetails(props) {
 	}
 
 	let displayHolidays = (holidays) => {
-		//Holiday API
-		// return holidays.map( holiday => <div className="holiday"><div className="holidayName">{holiday.name}</div> <div className="holidayDate">{holiday.date}</div><div className="holidayObserved">{holiday.date !== holiday.observed ? holiday.observed : " "}</div></div> )
-
-		//Calendarific API
 		return holidays.map((holiday, index) => (
 			<div className="holiday" key={index}>
 				<div className="holidayName" data-tip data-for={holiday.name}>
@@ -78,8 +68,7 @@ export function CountryDetails(props) {
 			</div>
 		));
 	};
-
-	// if (props.currentCountry !== "") {
+	
 	if (!!holidays) {
 		return (
 			<div className="country-details">
